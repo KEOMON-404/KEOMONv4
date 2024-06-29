@@ -222,20 +222,13 @@ def menu():
     linex()
     print(f"""[\u001b[36m1\033[1;37m] CRACK FILE  """)
     print(f"""[\u001b[36m2\033[1;37m] FILE CREATE """)
-    print(f"""[\u001b[36m3\033[1;37m] CONTACT ADMIN""")
-    print("""[\u001b[36m4\033[1;37m] JOIN WHATSAPP GC""")
     print("""[\u001b[36m0\033[1;37m] LOGOUT""")
     linex()
     HEART = input('\033[1;37m[\u001b[36m•\033[1;37m] CHOOSE: ')
-    if HEART in ['3']:
-        contact()
-    elif HEART in ['1']:
+    if HEART in ['1']:
         crack_file()
     elif HEART in ['2','02']:
         creattt()
-    elif HEART in ['4']:
-        wthap()
-        menu()
     else:
         linex()
         animation(' [×] SELECT CORRECTLY ')
