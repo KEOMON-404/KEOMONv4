@@ -257,7 +257,6 @@ def crack_file():
     for xid in lin:
         id.append(xid)
     setting()
- os.system("python run.py")
 #-------------[ PENGATURAN-IDZ ]---------------#
  
 def setting():
